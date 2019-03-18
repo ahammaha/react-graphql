@@ -3,7 +3,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import Link from './Link'
 
-const FEED_QUERY =  gql`
+const LINKS_QUERY =  gql`
   {
     links {
       id
@@ -17,7 +17,7 @@ const FEED_QUERY =  gql`
 class LinkList extends React.Component {
 	render(){
 		return(
-			<Query query={FEED_QUERY}>
+			<Query query={LINKS_QUERY}>
 				{({ loading, error, data }) => {
 					if (loading) return <div>Fetching</div>
 					if (error) return <div>Error</div>

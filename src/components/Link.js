@@ -5,7 +5,9 @@ class Link extends React.Component {
 		return(
 			<div>
 				<div>
-					{this.props.link.description} ({this.props.link.url})
+					<ul>
+						<li> {this.props.link.description} -- ({this.props.link.url}) </li>
+					</ul>
 				</div>
 			</div>
 		)
